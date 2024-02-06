@@ -9,5 +9,17 @@
 
 // Use both a for loop and a template string to solve the challenge
 function generateSentence(desc, arr) {
-    
+    let sentence = `The ${arr.length} ${desc} are `
+
+    for (let i = 0; i < arr.length; i++) {
+        if (i === arr.length - 1) {
+            sentence += arr[i]
+        } else {
+           sentence += arr[i] + ', ' 
+        }   
+    }
+
+    return sentence
 }
+
+console.log(generateSentence('best fruits', ['banana', 'mango']))
